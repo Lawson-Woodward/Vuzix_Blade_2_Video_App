@@ -32,6 +32,8 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package com.vuzix.sample.video_encoder;
 
+
+
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
@@ -63,6 +65,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
+import org.opencv.android.OpenCVLoader;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -79,6 +83,10 @@ import java.util.Objects;
  *
  * This sample uses the asynchronous API( callback method )
  */
+
+
+
+
 public class MainActivity extends Activity implements RotationListener.rotationCallbackFn{
 
 
@@ -125,12 +133,20 @@ public class MainActivity extends Activity implements RotationListener.rotationC
     private int mTrackIndex;
     private long mFramesIndex;
 
+
+
     /**
      * Setup the view when created
      * @param savedInstanceState - unused, passed to superclass
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        if(OpenCVLoader.initDebug()) Log.d("Loaded", "Success");
+        else Log.d("Loaded", "Error");
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
