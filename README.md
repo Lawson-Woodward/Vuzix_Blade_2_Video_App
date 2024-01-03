@@ -1,3 +1,3 @@
 This app works on Vuzix's Blade 2 Smart Glasses...
 This app is downloadable, and will prompt for video recording. After recording, the video will be sent into the Blade 2's storage under 'This PC\Blade 2\Internal shared storage\DCIM\video_encoder'. 
-***Files could corrupt if opened inside of the Blade 2's storage, so move them to your device's storage first.
+***Files could corrupt if opened inside of the Blade 2's storage, so move them to your device's storage first. There is also OpenCV integration.
